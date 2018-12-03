@@ -16,19 +16,18 @@ The UWP Host library provides you coustom UWP application window layout for your
 <li>Builtin ControlBox</li>
 <li>Extented Content Area</li>
 </ul>
-<br>
 <h2>Installation</h2>
 <br>
-<code>
-  Install-Package UWPHost
-</code>
+```
+Install-Package UWPHost
+```
 <br>
 <a href="">http://nuget.org/packages/UWPHost</a>
 <br>
 <h2>Prepration</h2>
-<br>
 <b>Adding Namespce</b>
 <br>
-<code>
+```xaml
   xmlns:uwp="clr-namespace:UWPHost;assembly=UWPHost"
+```
 </code>
