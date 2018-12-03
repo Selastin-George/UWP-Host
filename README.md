@@ -17,16 +17,32 @@ The UWP Host library provides you coustom UWP application window layout for your
 <li>Extented Content Area</li>
 </ul>
 <h2>Installation</h2>
-<br>
-<code>
+## Install
+
+*NuGet Package*
+```
 Install-Package UWPHost
-</code>
-<br>
-<a href="">http://nuget.org/packages/UWPHost</a>
-<br>
-<h2>Prepration</h2>
-<b>Adding Namespce</b>
-<br>
-<code>
-  xmlns:uwp="clr-namespace:UWPHost;assembly=UWPHost"
-</code>
+```
+https://nuget.org/packages/FluentWPF
+
+### Preparation
+
+Add XAML namespace.
+
+```xml
+xmlns:fw="clr-namespace:SourceChord.FluentWPF;assembly=FluentWPF"
+```
+
+Add ResourceDictionary to App.xaml.
+
+```xml
+<Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+             <!--  FluentWPF Controls  -->
+            <ResourceDictionary Source="pack://application:,,,/FluentWPF;component/Styles/Controls.xaml" />
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+</Application.Resources>
+```
+
