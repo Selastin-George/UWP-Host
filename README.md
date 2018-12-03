@@ -16,8 +16,7 @@ The UWP Host library provides you coustom UWP application window layout for your
 <li>Builtin ControlBox</li>
 <li>Extented Content Area</li>
 </ul>
-<h2>Installation</h2>
-## Install
+<h2>Install</h2>
 
 *NuGet Package*
 ```
@@ -30,19 +29,18 @@ https://nuget.org/packages/FluentWPF
 Add XAML namespace.
 
 ```xml
-xmlns:fw="clr-namespace:SourceChord.FluentWPF;assembly=FluentWPF"
+xmlns:uwp="clr-namespace:UWPHost;assembly=UWPHost"
 ```
 
 Add ResourceDictionary to App.xaml.
 
 ```xml
 <Application.Resources>
-    <ResourceDictionary>
-        <ResourceDictionary.MergedDictionaries>
-             <!--  FluentWPF Controls  -->
-            <ResourceDictionary Source="pack://application:,,,/FluentWPF;component/Styles/Controls.xaml" />
-        </ResourceDictionary.MergedDictionaries>
-    </ResourceDictionary>
-</Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/UWPHost;component/Themes/Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+ </Application.Resources>
 ```
 
