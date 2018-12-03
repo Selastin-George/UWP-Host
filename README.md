@@ -94,14 +94,11 @@ public partial class MainWindow : UWPHost.Window
 <h3>Light Theme<h3>
 <img src="https://github.com/Selastin-George/UWP-Host/blob/master/Sample/Assets/demo/light.png" Width="400" alt="Light Theme"/>
 <br>
-<br>
 <h3>Control Box</h3>
 <img src="https://github.com/Selastin-George/UWP-Host/blob/master/Sample/Assets/demo/controls.gif" Width="400" alt="Control Box"/>
 <br>
-<br>
 <h3>Flickerless Resize</h3>
 <img src="https://github.com/Selastin-George/UWP-Host/blob/master/Sample/Assets/demo/flicker.gif" Width="800" alt="Flickerless Resize"/>
-<br>
 <br>
 <h3>Extented Client Area</h3>
 <img src="https://github.com/Selastin-George/UWP-Host/blob/master/Sample/Assets/demo/extented client area.jpg" Width="800" alt="Extented Client Area"/>
