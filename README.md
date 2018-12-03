@@ -91,7 +91,6 @@ public partial class MainWindow : UWPHost.Window
 <h3>Dark Theme</h3>
 <img src="https://github.com/Selastin-George/UWP-Host/blob/master/Sample/Assets/demo/dark.png" Width="400" alt="Dark Theme"/>
 <br>
-<br>
 <h3>Light Theme<h3>
 <img src="https://github.com/Selastin-George/UWP-Host/blob/master/Sample/Assets/demo/light.png" Width="400" alt="Light Theme"/>
 <br>
