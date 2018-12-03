@@ -22,4 +22,13 @@ The UWP Host library provides you coustom UWP application window layout for your
 <code>
   Install-Package UWPHost
 </code>
+<br>
 <a href="">http://nuget.org/packages/UWPHost</a>
+<br>
+<h2>Prepration</h2>
+<br>
+<b>Adding Namespce</b>
+<br>
+<code>
+  xmlns:uwp="clr-namespace:UWPHost;assembly=UWPHost"
+</code>
