@@ -20,7 +20,7 @@ The UWP Host library provides you coustom UWP application window layout for your
 
 *NuGet Package*
 ```
-Install-Package UWPHost
+Install-Package UWPHost -Version 1.0.0
 ```
 https://nuget.org/packages/FluentWPF
 
@@ -104,5 +104,9 @@ public partial class MainWindow : UWPHost.Window
 <img src="https://github.com/Selastin-George/UWP-Host/blob/master/Sample/Assets/demo/extented client area.jpg" Width="800" alt="Extented Client Area"/>
 <br>
 <br>
+<h2>Donate</h2>
 
+Donate us through paytm.
+
+<img src="https://github.com/Selastin-George/UWP-Host/blob/master/Sample/Assets/demo/extented client area.jpg" Width="800" alt="Extented Client Area"/>
 
