@@ -12,7 +12,7 @@ UWP Host allows you to integrate UWP controls and windows to your wpf applicatio
 The UWP Host library provides you coustom UWP application window layout for your WPF applications.
 <h2>Features</h2>
 <ul>
-<li>No flickering on resizing window</li>
+<li>No flickering on resizing window (available only on windows 10 redstone update)</li>
 <li>Builtin ControlBox</li>
 <li>Extented Content Area</li>
 </ul>
@@ -59,6 +59,7 @@ MainWindow.xaml
         xmlns:local="clr-namespace:WpfApp1"
         xmlns:uwp="clr-namespace:UWPHost;assembly=UWPHost"
         mc:Ignorable="d"
+        ShowTitlebar="true" Theme="Light"
         Title="MainWindow" Height="300" Width="300">
 
 </uwp:Window>
@@ -74,3 +75,17 @@ public partial class MainWindow : UWPHost.Window
     }
 }
 ```
+##### Properties
+
+|Property Name|Type|Description|
+|-----|-----|-----|
+|ShowTitlebar|bool|Show or Hide the titlebar of the window.|
+|TitlebarBrush|SolidColorBrush|Sets the color of the titlebar.|
+|Theme|String|Set the theme of window. ie; Light or Dark. |
+
+<br>
+<br>
+
+#### Screenshots
+
+![Reveal](./docs/Reveal/Reveal.gif)
