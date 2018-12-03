@@ -9,4 +9,4 @@ UWP Host allows you to integrate UWP controls and windows to your wpf applicatio
   <li><h3>UWP Window</h3></li>
 </ul>
 <br>
-The __UWP Host__ library provides you coustom UWP application window layout for your WPF applications
+The UWP Host library provides you coustom UWP application window layout for your WPF applications
