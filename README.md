@@ -86,6 +86,34 @@ public partial class MainWindow : UWPHost.Window
 <br>
 <br>
 
-#### Screenshots
+<h2>Screenshots</h2>
+<br>
+<img src="https://github.com/Selastin-George/UWP-Host/blob/master/Sample/Assets/demo/dark.png" Width="800" alt="Dark Theme"/>
+<br>
+<br>
+#### Dark Theme
+<br>
+<br>
+<img src="https://github.com/Selastin-George/UWP-Host/blob/master/Sample/Assets/demo/light.png" Width="800" alt="Dark Theme"/>
+<br>
+<br>
+#### Light Theme
+<br>
+<br>
+<img src="https://github.com/Selastin-George/UWP-Host/blob/master/Sample/Assets/demo/controls.gif" Width="800" alt="Dark Theme"/>
+<br>
+<br>
+#### Control Box
+<br>
+<br>
+<img src="https://github.com/Selastin-George/UWP-Host/blob/master/Sample/Assets/demo/flicker.gif" Width="800" alt="Dark Theme"/>
+<br>
+<br>
+#### Flickerless Resize
+<br>
+<br>
+<img src="https://github.com/Selastin-George/UWP-Host/blob/master/Sample/Assets/demo/extented client area.jpg" Width="800" alt="Dark Theme"/>
+<br>
+<br>
+#### Extented Client Area
 
-![Reveal](./docs/Reveal/Reveal.gif)
