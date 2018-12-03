@@ -18,7 +18,7 @@ The UWP Host library provides you coustom UWP application window layout for your
 </ul>
 <h2>Installation</h2>
 <br>
-```
+```html
 Install-Package UWPHost
 ```
 <br>
@@ -27,7 +27,7 @@ Install-Package UWPHost
 <h2>Prepration</h2>
 <b>Adding Namespce</b>
 <br>
-```xaml
+```html
   xmlns:uwp="clr-namespace:UWPHost;assembly=UWPHost"
 ```
 </code>
