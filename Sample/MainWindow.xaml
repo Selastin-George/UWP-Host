@@ -1,0 +1,15 @@
+﻿<uwp:Window x:Class="Sample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:uwp="clr-namespace:UWPHost;assembly=UWPHost"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:shell="http://schemas.microsoft.com/winfx/2006/xaml/presentation/shell"
+        xmlns:local="clr-namespace:Sample"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="490" Width="995"
+        ShowTitlebar="True"
+        Theme="Light"
+        Style="{DynamicResource Generic}">
+    <Grid/>
+</uwp:Window>

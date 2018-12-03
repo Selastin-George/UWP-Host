@@ -1,0 +1,207 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:UWPHost.Themes.Resources"
+                    xmlns:uwp="clr-namespace:UWPHost"
+                    xmlns:shell="http://schemas.microsoft.com/winfx/2006/xaml/presentation/shell">
+
+    <ControlTemplate TargetType="uwp:Window" x:Key="light">
+        <Grid  x:Name="container" Background="#1a1a1a" Margin="1">
+            <ContentPresenter x:Name="content_presenter"/>
+            <Grid x:Name="titlebar" Height="33" Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Background="{Binding TitlebarBrush,RelativeSource={RelativeSource Mode=TemplatedParent}}">
+                <TextBlock x:Name="title" HorizontalAlignment="Left" Height="24" Margin="15,8,0,0" TextWrapping="Wrap" Text="{TemplateBinding Title}" VerticalAlignment="Top" Width="300" Foreground="White"/>
+                <Button Style="{DynamicResource close_btn_light}" 
+                                                shell:WindowChrome.IsHitTestVisibleInChrome="True"
+                                                Command="{x:Static shell:SystemCommands.CloseWindowCommand}"
+												CommandParameter="{Binding ElementName=MainWindow}"
+                                                x:Name="close_btn"/>
+
+                <Button Style="{DynamicResource maximize_btn_light}"
+												shell:WindowChrome.IsHitTestVisibleInChrome="True"
+                                                Command="{x:Static shell:SystemCommands.MaximizeWindowCommand}"
+												CommandParameter="{Binding ElementName=MainWindow}"
+                                                x:Name="maximize_btn"/>
+
+                <Button Style="{DynamicResource minimize_btn_light}" 
+                                                shell:WindowChrome.IsHitTestVisibleInChrome="True"
+                                                Command="{x:Static shell:SystemCommands.MinimizeWindowCommand}"
+												CommandParameter="{Binding ElementName=MainWindow}"
+                                                x:Name="minimize_btn"/>
+
+            </Grid>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="uwp:Window.ShowTitlebar" Value="true">
+                <Setter Property="Visibility" Value="Visible" TargetName="titlebar"/>
+                <Setter Property="Margin" Value="0,32,0,0" TargetName="content_presenter"/>
+            </Trigger>
+            <Trigger Property="uwp:Window.ShowTitlebar" Value="false">
+                <Setter Property="Visibility" Value="Hidden" TargetName="titlebar"/>
+                <Setter Property="Margin" Value="0" TargetName="content_presenter"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+
+    </ControlTemplate>
+
+    <ControlTemplate TargetType="uwp:Window" x:Key="dark">
+        <Grid Margin="1" x:Name="container" Background="#e2e2e2">
+            <ContentPresenter x:Name="content_presenter"/>
+            <Grid x:Name="titlebar" Height="33" Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Background="{Binding TitlebarBrush,RelativeSource={RelativeSource Mode=TemplatedParent}}">
+                <TextBlock x:Name="title" HorizontalAlignment="Left" Height="24" Margin="15,8,0,0" TextWrapping="Wrap" Text="{TemplateBinding Title}" VerticalAlignment="Top" Width="300" Foreground="Black"/>
+                <Button Style="{DynamicResource close_btn_dark}" 
+                                                shell:WindowChrome.IsHitTestVisibleInChrome="True"
+                                                Command="{x:Static shell:SystemCommands.CloseWindowCommand}"
+												CommandParameter="{Binding ElementName=MainWindow}"
+                                                x:Name="close_btn"/>
+
+                <Button Style="{DynamicResource maximize_btn_dark}"
+												shell:WindowChrome.IsHitTestVisibleInChrome="True"
+                                                Command="{x:Static shell:SystemCommands.MaximizeWindowCommand}"
+												CommandParameter="{Binding ElementName=MainWindow}"
+                                                x:Name="maximize_btn"/>
+
+                <Button Style="{DynamicResource minimize_btn_dark}" 
+                                                shell:WindowChrome.IsHitTestVisibleInChrome="True"
+                                                Command="{x:Static shell:SystemCommands.MinimizeWindowCommand}"
+												CommandParameter="{Binding ElementName=MainWindow}"
+                                                x:Name="minimize_btn"/>
+            </Grid>
+        </Grid>
+
+        <ControlTemplate.Triggers>
+            
+            <Trigger Property="uwp:Window.ShowTitlebar" Value="true">
+                <Setter Property="Visibility" Value="Visible" TargetName="titlebar"/>
+            </Trigger>
+            <Trigger Property="uwp:Window.ShowTitlebar" Value="false">
+                <Setter Property="Visibility" Value="Hidden" TargetName="titlebar"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+
+    <Style TargetType="{x:Type Button}" x:Key="close_btn_light">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid x:Name="close" Width="46" Height="32" Margin="0" Background="#00000000" HorizontalAlignment="Right" VerticalAlignment="Top">
+                        <TextBlock x:Name="close_icon" HorizontalAlignment="Right" Height="20" Margin="0,0,6,1" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="21" FontFamily="/UWPHost;component/Assets/Fonts/Segoe UI/#Segoe MDL2 Assets" Foreground="#ffffff" FontSize="9.500"><Run Text="&#xE894;"/></TextBlock>
+                        <TextBlock x:Name="close_icon_overlay" HorizontalAlignment="Right" Height="20" Margin="0,0,6,1" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="21" FontFamily="/UWPHost;component/Assets/Fonts/Segoe UI/#Segoe MDL2 Assets" Foreground="#ffffff" FontSize="9.500"><Run Text="&#xE894;"/></TextBlock>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Red" TargetName="close"/>
+                        </Trigger>
+
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="#ffffff" TargetName="close_icon"/>
+                        </Trigger>
+
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="#ffffff" TargetName="close_icon_overlay"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type Button}" x:Key="close_btn_dark">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid x:Name="close" Width="46" Height="32" Margin="0" Background="#00000000" HorizontalAlignment="Right" VerticalAlignment="Top">
+                        <TextBlock x:Name="close_icon" HorizontalAlignment="Right" Height="20" Margin="0,0,6,1" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="21" FontFamily="/UWPHost;component/Assets/Fonts/Segoe UI/#Segoe MDL2 Assets" Foreground="#000000" FontSize="9.500"><Run Text="&#xE894;"/></TextBlock>
+                        <TextBlock x:Name="close_icon_overlay" HorizontalAlignment="Right" Height="20" Margin="0,0,6,1" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="21" FontFamily="/UWPHost;component/Assets/Fonts/Segoe UI/#Segoe MDL2 Assets" Foreground="#000000" FontSize="9.500"><Run Text="&#xE894;"/></TextBlock>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Red" TargetName="close"/>
+                        </Trigger>
+
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="#ffffff" TargetName="close_icon"/>
+                        </Trigger>
+
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="#ffffff" TargetName="close_icon_overlay"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type Button}" x:Key="maximize_btn_light">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid Name="maximize" Width="46" Height="32" Margin="0,0,46,0" Background="#00000000" HorizontalAlignment="Right" VerticalAlignment="Top">
+                        <TextBlock x:Name="maximize_icon" HorizontalAlignment="Right" Height="20" Margin="0,0,6,1" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="21" FontFamily="/UWPHost;component/Assets/Fonts/Segoe UI/#Segoe MDL2 Assets" Foreground="#ffffff" FontSize="9.500"><Run Text="&#xE922;"/></TextBlock>
+                        <TextBlock x:Name="restore_icon" Visibility="Hidden" HorizontalAlignment="Right" Height="20" Margin="0,0,7,1" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="21" FontFamily="/UWPHost;component/Assets/Fonts/Segoe UI/#Segoe MDL2 Assets" Foreground="#ffffff" FontSize="9.500"><Run Text="&#xE923;"/></TextBlock>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="maximize" Property="Background" Value="#4CFFFFFF"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type Button}" x:Key="maximize_btn_dark">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid Name="maximize" Width="46" Height="32" Margin="0,0,46,0" Background="#00000000" HorizontalAlignment="Right" VerticalAlignment="Top">
+                        <TextBlock x:Name="maximize_icon" HorizontalAlignment="Right" Height="20" Margin="0,0,6,1" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="21" FontFamily="/UWPHost;component/Assets/Fonts/Segoe UI/#Segoe MDL2 Assets" Foreground="#000000" FontSize="9.500"><Run Text="&#xE922;"/></TextBlock>
+                        <TextBlock x:Name="restore_icon" Visibility="Hidden" HorizontalAlignment="Right" Height="20" Margin="0,0,7,1" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="21" FontFamily="/UWPHost;component/Assets/Fonts/Segoe UI/#Segoe MDL2 Assets" Foreground="#000000" FontSize="9.500"><Run Text="&#xE923;"/></TextBlock>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="maximize" Property="Background" Value="#19000000"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="minimize_btn_light" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid Name="minimize" Width="46" Height="32" Margin="0,0,92,0" Background="#00000000" HorizontalAlignment="Right" VerticalAlignment="Top">
+                        <TextBlock x:Name="minimize_icon" HorizontalAlignment="Right" Height="20" Margin="0,0,6,1" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="21" FontFamily="/UWPHost;component/Assets/Fonts/Segoe UI/#Segoe MDL2 Assets" Foreground="#ffffff" FontSize="9.500"><Run Text="&#xE921;"/></TextBlock>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="minimize" Property="Background" Value="#4cffffff"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="minimize_btn_dark" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid Name="minimize" Width="46" Height="32" Margin="0,0,92,0" Background="#00000000" HorizontalAlignment="Right" VerticalAlignment="Top">
+                        <TextBlock x:Name="minimize_icon" HorizontalAlignment="Right" Height="20" Margin="0,0,6,1" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="21" FontFamily="/UWPHost;component/Assets/Fonts/Segoe UI/#Segoe MDL2 Assets" Foreground="#000000" FontSize="9.500"><Run Text="&#xE921;"/></TextBlock>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="minimize" Property="Background" Value="#19000000"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>
