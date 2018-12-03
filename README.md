@@ -8,6 +8,20 @@ UWP Host allows you to integrate UWP controls and windows to your wpf applicatio
 <ul>
   <li><h3>UWP Window</h3></li>
 </ul>
-<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 The UWP Host library provides you coustom UWP application window layout for your WPF applications.
+<h2>Features</h2>
+<ul>
+<li>No flickering on resizing window</li>
+<li>Builtin ControlBox</li>
+<li>Extented Content Area</li>
+</ul>
+<br>
+<h2>Installation</h2>
+<br>
+<code>
+  
+  Install-Package UWPHost
+  
+</code>
+<a href="">http://nuget.org/packages/UWPHost</a>
