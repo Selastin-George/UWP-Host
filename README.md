@@ -108,5 +108,5 @@ public partial class MainWindow : UWPHost.Window
 
 Donate us through paytm.
 
-<img src="https://github.com/Selastin-George/UWP-Host/blob/master/Sample/Assets/demo/extented client area.jpg" Width="800" alt="Extented Client Area"/>
+<img src="https://github.com/Selastin-George/UWP-Host/blob/master/donate.png" Width="500" alt="Extented Client Area"/>
 
