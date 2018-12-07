@@ -22,7 +22,7 @@ The UWP Host library provides you coustom UWP application window layout for your
 ```
 Install-Package UWPHost -Version 1.0.0
 ```
-https://nuget.org/packages/FluentWPF
+https://nuget.org/packages/UWPHost
 
 ### Preparation
 
